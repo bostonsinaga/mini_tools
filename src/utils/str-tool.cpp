@@ -166,6 +166,18 @@ namespace utils {
     return vec;
   }
 
+  std::string StrTool::deactivateNewlines(CR_STR str) {
+    std::string deactivatedNewlines;
+
+    for (CR_CH ch : str) {
+      if (ch == '\n') deactivatedNewlines += "\\n";
+      else if (ch == '\r') deactivatedNewlines += "\\r";
+      else deactivatedNewlines += ch;
+    }
+
+    return deactivatedNewlines;
+  }
+
   PAIR<int> StrTool::findSpaceBoundaryIndexes(CR_STR text) {
     PAIR<int> spaceBoundaryIndexes = {0, 0};
 

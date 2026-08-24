@@ -73,6 +73,9 @@ namespace utils {
     static VEC_STR whitespaceSlice(CR_STR str);
     static VEC_STR whitespaceSliceExceptQuotes(CR_STR str);
 
+    // to make the string display on a single line only
+    static std::string deactivateNewlines(CR_STR str);
+
     /**
      * Find the first character index other than
      * space or newline from left and right.
